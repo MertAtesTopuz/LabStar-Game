@@ -244,8 +244,8 @@ public class StartingExample : MonoBehaviour
 
                         }, (address, characteristicUUID, bytes) =>
                         {
-
-                            if(){
+                            int intVal = Convert.ToInt32(bytes);
+                            if (intVal <= 10){
                                 hook.firlat();
                             }
                             StatusMessage = Encoding.Default.GetString(bytes).Split("#")[2];
